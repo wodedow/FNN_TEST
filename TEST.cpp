@@ -218,11 +218,10 @@ int main() {
     //srand((unsigned)time(NULL));
     int L = 3;											    //神经网络的层数
     int m[] = { img_size, 300,50, classes };				//每一层的结点数：m[1:]
-    int* mm = m;
     float accuracy = 0;
 
     FNN Net;
-    accuracy=FNNTest(Net,  L, mm);
+    accuracy=FNNTest(Net,  L, m);
     printf("Accuracy is: %f", accuracy);
 
     memset(&Net, 0, sizeof(Net));
